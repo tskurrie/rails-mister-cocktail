@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+  <h1 class="navbar-brand mb-0 h1"><%= @cocktail.name %></h1>
+  <div class = "navcontent">
+        <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %></li>
+  <div>
+</nav>
+
+<h1><%= @cocktail.name %></h1>
+<% @cocktail.doses.each do |d|%>
+<p><%= d.description %> <%= d.ingredient.name %></p>
+<% end %>
+
+
+<%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %>

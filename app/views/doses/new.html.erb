@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light">
+  <h1 class="navbar-brand mb-0 h1">New Cocktail</h1>
+  <div class = "navcontent">
+        <%= link_to 'Back to cocktail list', cocktails_path, class: "btn btn-primary" %></li>
+  <div>
+</nav>
+
+<br>
+<div class='container'>
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.error_notification %>
+     <%= f.input :description %>
+     <%= f.input :ingredient, collection: Ingredient.all %>
+     <%= f.submit "Submit", class: 'btn-primary' %>
+  <% end %>
+</div>
+
+<div class='container'>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.error_notification %>
+    <%= f.name%>
+    <%= f.simple_fields_for :dose do |d|%>
+     <%= f.input :description %>
+     <%= f.input :ingredient, collection: Ingredient.all %>
+    <% end %> 
+     <%= f.submit "Submit", class: 'btn-primary' %>
+  <% end %>
+</div>

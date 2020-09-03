@@ -1,0 +1,30 @@
+
+
+<br>
+
+<div class='container'; style=>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name %>
+    <br>
+    <div class=container, style="display: flex; width: 100%; justify-content: space-between">
+      <div style= 'width: 20%'> 
+      <%= f.simple_fields_for :doses do |d| %>
+        <%= d.input :description, label: false, placeholder: '- Add Amount -', label: 'Amount' %>
+      <% end %>
+      </div>
+      <div style= 'width: 70%'>
+      <%= f.simple_fields_for :ingredients do |i| %>
+        <%= i.input :id, collection: Ingredient.all, include_blank: '- Add ingredient -', label: 'Ingredient' %>
+      <% end %>
+      </div>
+      <div style= 'display: inline-block; align-self: flex-end' >
+        <button type='button' class='btn btn-outline-secondary' style='margin-bottom: 18px'> + </button>
+      </div>
+    </div> 
+     
+    <br>
+    <br>
+    <%= f.button :submit, class: 'btn-primary'  %>
+  <% end %>
+</div>
