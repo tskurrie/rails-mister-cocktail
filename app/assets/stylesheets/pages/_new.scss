@@ -1,0 +1,13 @@
+
+.masthead {
+    width: 100vw;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 100px;
+    background-color: black;
+  }

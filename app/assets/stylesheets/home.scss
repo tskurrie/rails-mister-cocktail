@@ -1,0 +1,15 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.masthead {
+    width: 100vw;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 100px;
+}

@@ -40,11 +40,9 @@
     <%= stylesheet_link_tag 'cover' %>
   </head>
 
-  <body class ='text-centre'>
-    <div class="cover d-flex w-100 h-100 p-3 mx-auto flex-column", style="max-width: 90vw">
-    <%= render 'layouts/header'%>   
+  <body>
     <%= yield %>
-    <%= render 'layouts/footer'%>
-    </div>
+
   </body>
 </html>
+

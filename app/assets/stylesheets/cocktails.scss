@@ -6,3 +6,57 @@
     display: inline-flex;
     justify-content: space-between;
 }
+
+.masthead {
+    width: 100vw;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+.mastfoot {
+    position: fixed;
+    bottom: 0;
+}
+
+.imgcarousel {
+
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+    z-index: -1;
+   
+}
+
+
+html,
+body {
+  background-color: white;
+}
+
+.gradient {
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.2) 0%,rgba(0,0,0,0.9) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.2) 0%,rgba(0,0,0,0.9) 100%);
+}
+
+.list-group-item.active {
+    background-color: grey;
+    border-color: grey
+}
+
+.page-link {
+    color: black;
+}
+
+.card-text {
+    color: black
+}
+
+.card:hover {
+    cursor: pointer;
+}

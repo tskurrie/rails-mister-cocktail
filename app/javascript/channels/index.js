@@ -3,3 +3,9 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+
+
+
+$("carousel-control-next").click(function(){
+    $("#carousel-control-next").carousel("next");
+  });
